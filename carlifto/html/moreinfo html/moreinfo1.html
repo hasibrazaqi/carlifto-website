@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="/img/Asset 1.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/moreinfo css/moreinfo1.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Body-Parts</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="carlifto-wrapper">
+        <img class="carlifto" src="/img/Asset 10.png" alt="google" />
+        <img class="carlifto-text" src="/img/Asset 11.png" alt="google" />
+      </div>
+      <div class="nav-links">
+        <ul>
+          <a class="links" href="/html/index.html"><li>home</li></a>
+          <a class="about-header-links" href="/html/#about"><li>about</li></a>
+          <div class="dropdown">
+            <button class="dropbtn"><a href="/html/#services">Car Parts</a></button>
+            <div class="dropdown-content">
+              <a href="#">tire</a>
+              <a href="#">light</a>
+              <a href="#">door</a>
+            </div>
+          </div>
+          <!-- <a class="contact-link" href="/html/#contact"><li>contact</li></a> -->
+      </div>
+    </div>
+    <div class="text">
+      <h1>CARS</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab praesentium nihil voluptas consequatur, eius sapiente deleniti optio et est repellat, libero quam itaque odio similique animi nesciunt earum quos! Maxime!</p>
+      <a class="btn-a" href="/html/#contact"><button class="contact-btn">contact</button></a>
+    </div>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="/img/wallpaperflare.com_wallpaper (3).jpg" style="width: 100%"/>
+        <!-- <div class="text">Caption Text</div> -->
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="../img/seat.jpg" style="width: 100%"/>
+        <!-- <div class="text">Caption Two</div> -->
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="../img/tire.jpg" style="width: 100%" />
+        <!-- <div class="text">Caption Three</div> -->
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <br />
+
+    <div>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <!-- footer section Start  -->
+    <section class="footer-section">
+      <div class="footer-img">
+        <img src="/img/Asset 10.png" alt="google" />
+      </div>
+      <div class="footer-text">
+        <a href="/html/index.html">home</a>
+        <a href="/html/#about">about</a>
+        <a href="/html/#services">car parts</a>
+        <a href="/html/#contact">contact</a>
+      </div>
+      <div class="footer-contact">
+        <p class="contact-text">contact</p>
+        <a id="address" href="https://goo.gl/maps/iWvkRhaC6ZJSP9M86"
+          >yotsukaido dainichi 527 mezon 205</a
+        >
+        <p>&#43;83 90-5362-9891</p>
+        <a id="gmail" href="mailto:razaqishohaib@gmail.com"
+          target="_blank" >razaqishohaib@gmail.com</a
+        >
+        <div class="icon-div">
+          <a
+            class="facebook"
+            href="https://www.facebook.com/shohaib.razaqishohaib"
+            target="_blank"
+            ><ion-icon class="facebook-logo" name="logo-facebook"></ion-icon
+          ></a>
+          <a href="https://www.instagram.com/razaqi_shohaib/" target="_blank"
+            ><ion-icon name="logo-instagram"></ion-icon
+          ></a>
+        </div>
+      </div>
+    </section>
+    <!-- footer section End  -->
+    <section id="bottom">
+      <p>Copyright © 2023 CARLIFTO | Developed by: Razaqi Hasibullah</p>
+    </section>
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
